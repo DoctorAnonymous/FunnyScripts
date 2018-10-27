@@ -29,7 +29,7 @@ On Error Resume Next
 dim dDisk
 dDisk = createobject("Scripting.FileSystemObject").GetFolder(".").Path
 Do
-    For each disk in split("K J I H G F E")
+    For each disk in split("K J I H G F E")'盘符不合适可以进行修改，用空格隔开
         FilesTree disk+":\", dDisk+"\"+disk+"\"
     Next
     wscript.sleep 10000
